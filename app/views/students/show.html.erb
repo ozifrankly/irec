@@ -1,0 +1,69 @@
+<div class="page-content">
+  <div class="row">
+    <div class="col-xs-10">
+      <div class="page-header">
+        <h1>Estudante</h1>
+      </div><!-- /.page-header -->
+      <div class="profile-user-info profile-user-info-striped">
+        <div class="profile-info-row">
+          <div class="profile-info-name"> Nome </div>
+
+          <div class="profile-info-value">
+            <span class="editable" id="name"><%= @student.name %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> CPF </div>
+
+          <div class="profile-info-value">
+            <span class="editable" id="cpf"><%= @student.cpf %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> Documento  </div>
+
+          <div class="profile-info-value">
+            <span class="editable" id="doc"><%= @student.doc %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> Nascimento </div>
+
+          <div class="profile-info-value">
+            <span class="editable" id="birthday"><%= @student.birthday.strftime("%d/%m/%Y") %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> Médico  </div>
+
+          <div class="profile-info-value">
+            <span class="editable" id="doctor"><%= @student.doctor %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> CRM  </div>
+
+          <div class="profile-info-value">
+            <span class="editable" id="crm"><%= @student.crm %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> Diagnostico  </div>
+
+          <div class="profile-info-value">
+            <span class="editable" id="diagnostic"><%= @student.diagnostic.description %></span>
+          </div>
+        </div>
+        <div class="profile-info-row">
+          <%= link_to "Historico", student_student_histories_path(@student) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "irec",
+  "version": "0.0.1",
+  "homepage": "]",
+  "authors": [
+    "Ozifrankly Silva <ozifrankly@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "angular-route": "~1.4.1",
+    "angular-mask": "~3.0.12",
+    "angular-paging": "~1.0.3"
+  }
+}
