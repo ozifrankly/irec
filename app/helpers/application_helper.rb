@@ -10,4 +10,10 @@ module ApplicationHelper
     ServiceType.order(name: :asc).each{|d| result.merge!({d.name => d.id})}
     result
   end
+
+  def service_select
+    result = {}
+    Service.order(name: :asc).each{|d| result.merge!({d.name => d.id})}
+    result
+  end
 end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :diagnostics, only: [ :index, :create, :update ]
   resources :service_types, only: [ :index, :create, :update ]
   resources :services, only: [ :index, :create, :update ]
+  resources :courses, only: [ :index, :create, :update ]
 
   root 'students#index'
 

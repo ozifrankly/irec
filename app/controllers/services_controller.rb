@@ -29,13 +29,9 @@ class ServicesController < ApplicationController
 
   private
 
-  def default_serializer_options
-      {root: false}
-  end
-
   def services_json
     page = params[:page] || 1
-    services = Service.joins(:service_type).order(name: :asc).page(params[:page])
+    services = Service.includes(:service_type).order(name: :asc).page(params[:page])
     {
       total_items: Service.count,
       current_page: page,
