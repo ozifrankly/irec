@@ -27,7 +27,7 @@
     <label class="control-label col-xs-12 col-sm-3 no-padding-right">Nascimento*:</label>
     <div class="col-xs-12 col-sm-9">
       <div class="clearfix">
-        <%= f.text_field :birthday, class:"col-xs-12 col-sm-6", mask:"39/99/9999", 'ng-model':'birthday', required: 'true' , 'ng-init':"birthday = '#{@student.birthday.strftime("%d/%m/%Y")}'"%>
+        <%= f.text_field :birthday, class:"col-xs-12 col-sm-6", mask:"39/99/9999", 'ng-model':'birthday', required: 'true' , 'ng-init':"birthday = '#{@student.birthday.try(:strftime,"%d/%m/%Y")}'"%>
       </div>
     </div>
   </div>

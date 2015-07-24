@@ -14,6 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def create
+    @student = Student.create(student_params)
     if @student.errors.empty?
       redirect_to @student 
     else
