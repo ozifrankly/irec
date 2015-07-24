@@ -35,6 +35,9 @@
                 <td class="center">{{course.service.name}}</td>
                 <td class="center">
                   <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+                    <a ng-href="courses/{{course.id}}" class="btn btn-xs btn-success">
+                      <i class="icon-ok bigger-120"></i>
+                    </a>
 
                     <a href="#" class="btn btn-xs btn-info" ng-click="edit(course.name, course.service.id, course.id)">
                       <i class="icon-edit bigger-120"></i>

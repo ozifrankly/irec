@@ -7,7 +7,14 @@ Rails.application.routes.draw do
   resources :diagnostics, only: [ :index, :create, :update ]
   resources :service_types, only: [ :index, :create, :update ]
   resources :services, only: [ :index, :create, :update ]
-  resources :courses, only: [ :index, :create, :update ]
+  resources :courses, only: [ :index, :create, :update, :show ] do
+    member do
+      post 'addstudent/:student_id', to: 'courses#add_student', as: :add_student
+      get 'students'
+      delete 'removestudent/:student_di', to: 'course#remove_student', as: :remove_student
+      get 'student/:student_di', to: 'course#student', as: :student
+    end
+  end
 
   root 'students#index'
 

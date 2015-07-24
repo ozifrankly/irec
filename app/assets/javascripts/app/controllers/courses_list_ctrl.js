@@ -31,7 +31,6 @@ angular.module("IREC").controller("CourseListCtrl",["$scope", "$http", function(
   var savecourses = function(){
     $http.post("courses.json", { course: { name: $scope.name, service_id: $scope.service_id }} )
   .success(function(data){
-    debugger;
     $scope.page.courses.unshift(data);
     $scope.name = "";
     $scope.service_id = '';

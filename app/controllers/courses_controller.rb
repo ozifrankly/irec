@@ -16,6 +16,10 @@ class CoursesController < ApplicationController
     end
   end
 
+  def show
+    @course = Course.find(params[:id])
+  end
+
   def update
     @course = Course.find(params[:id])
     @course.update(course_params)
@@ -25,6 +29,34 @@ class CoursesController < ApplicationController
       render nothing: true
     end
 
+  end
+
+  def add_student
+    @course = Course.find(params[:id])
+    @student = Student.find(params[:student_id])
+    if @student && !@course.students.include?(@student)
+      @course.students << @student
+      render json: @student
+    else
+      render nothing: true, status: :not_found
+    end
+  end
+
+  def remove_student
+    @course = Course.find(params[:id])
+    @student = Student.find(params[:student_id])
+    if @student
+      @course.students.delete @student
+      render json: @student
+    else
+      render nothing: true, status: :not_found
+    end
+  end
+
+  def students
+    @course = Course.find(params[:id])
+    @students = @course.students 
+    render json: @students.to_json
   end
 
   private
