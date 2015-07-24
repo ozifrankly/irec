@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150723014157) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.integer  "service_id"
@@ -27,8 +30,8 @@ ActiveRecord::Schema.define(version: 20150723014157) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "courses_students", ["course_id"], name: "index_courses_students_on_course_id"
-  add_index "courses_students", ["student_id"], name: "index_courses_students_on_student_id"
+  add_index "courses_students", ["course_id"], name: "index_courses_students_on_course_id", using: :btree
+  add_index "courses_students", ["student_id"], name: "index_courses_students_on_student_id", using: :btree
 
   create_table "diagnostics", force: :cascade do |t|
     t.string   "description"
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 20150723014157) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "student_histories", ["student_id"], name: "index_student_histories_on_student_id"
+  add_index "student_histories", ["student_id"], name: "index_student_histories_on_student_id", using: :btree
 
   create_table "students", force: :cascade do |t|
     t.string   "name"
@@ -71,9 +74,9 @@ ActiveRecord::Schema.define(version: 20150723014157) do
     t.string   "doctor"
   end
 
-  add_index "students", ["cpf"], name: "index_students_on_cpf"
-  add_index "students", ["doc"], name: "index_students_on_doc"
-  add_index "students", ["name"], name: "index_students_on_name"
+  add_index "students", ["cpf"], name: "index_students_on_cpf", using: :btree
+  add_index "students", ["doc"], name: "index_students_on_doc", using: :btree
+  add_index "students", ["name"], name: "index_students_on_name", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -90,7 +93,7 @@ ActiveRecord::Schema.define(version: 20150723014157) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

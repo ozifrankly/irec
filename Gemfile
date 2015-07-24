@@ -33,6 +33,7 @@ gem 'kaminari'
 gem 'active_model_serializers'
 gem 'angular_rails_csrf'
 gem 'puma'
+gem 'pg'
 
 
 # Use ActiveModel has_secure_password
