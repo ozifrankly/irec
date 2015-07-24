@@ -34,6 +34,7 @@ gem 'simple_form'
 gem 'kaminari'
 gem 'active_model_serializers'
 gem 'angular_rails_csrf'
+gem 'puma'
 
 
 # Use ActiveModel has_secure_password
