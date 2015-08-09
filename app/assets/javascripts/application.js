@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require angular/angular
 //= require angular-paging/paging
-//= require angular-mask/dist/ngMask
-//= require bootstrap/dist/js/bootstrap
+//= require angular-mask
+//= require bootstrap
 //= require ./app
 //= require_tree .

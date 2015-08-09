@@ -10,7 +10,7 @@
           <input type="text" class="form-control" aria-title="basic-addon1" ng-model="name">
           <label class="input-group-addon" id="basic-addon1">Tipo de serviço</label>
           <%= select '', '', service_types_select, {}, class:"form-control", 'aria-title':"basic-addon1", 'ng-model':"service_type_id" %>
-          <button class="btn btn-success" ng-click='save()' style='margin-top:10px'>  
+          <button class="btn btn-success" ng-click='save()' style='margin-top:10px'>
             Salvar
           </button>
         </div>
@@ -37,7 +37,7 @@
                   <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
 
                     <a href="#" class="btn btn-xs btn-info" ng-click="edit(service.name, service.service_type.id,  service.id)">
-                      <i class="icon-edit bigger-120"></i>
+                      <i class="glyphicon glyphicon-edit bigger-120"></i>
                     </a>
 
                   </div>

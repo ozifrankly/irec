@@ -36,6 +36,13 @@ gem 'puma'
 gem 'pg'
 gem 'rails_12factor', group: :production
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular'
+  gem 'rails-assets-angular-mask'
+  gem 'rails-assets-angular-paging'
+  gem 'rails-assets-angular-route'
+  gem 'rails-assets-bootstrap'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -48,4 +55,3 @@ gem 'rails_12factor', group: :production
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
