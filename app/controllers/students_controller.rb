@@ -16,7 +16,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.create(student_params)
     if @student.errors.empty?
-      redirect_to @student 
+      redirect_to @student
     else
       render 'new'
     end
@@ -54,7 +54,7 @@ class StudentsController < ApplicationController
 
   def students_json
     page = params[:page] || 1
-    students = Student.page(params[:page])
+    students = Student.search(params[:q]).page(params[:page])
     {
       total_items: Student.count,
       current_page: page,

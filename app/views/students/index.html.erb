@@ -6,13 +6,16 @@
       </div><!-- /.page-header -->
       <a href=<%= new_student_path %> class="btn btn-success">
         Novo Estudante
-       </a>
-       <hr>
+      </a>
+      <hr>
       <!-- PAGE CONTENT BEGINS -->
 
       <div class="row">
         <div class="col-xs-12">
           <div class="table-responsive" ng-controller="StudentsListCtrl">
+            <button class="btn btn-success" ng-click='search()'>Buscar</button>
+            <input ng-model='query'>
+
             <table id="sample-table-1" class="table table-striped table-bordered table-hover">
               <thead>
                 <tr>
