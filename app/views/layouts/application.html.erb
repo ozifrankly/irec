@@ -20,10 +20,20 @@
        <a href="#" class="navbar-brand">
          <small>
            <i class="glyphicon glyphicon-leaf"></i>
-           IREC/RN - Instituto de Reabilitação e Educação de Cegos do Rio Grande do Norte
+           IREC/RN - Instituto de Educação e Reabilitação de Cegos do Rio Grande do Norte
          </small>
        </a><!-- /.brand -->
       </div><!-- /.navbar-header -->
+      <div class="navbar-header pull-right" role="navigation">
+        <ul class="nav ace-nav">
+          <li class="light-blue">
+            <a href="<%= destroy_user_session_path %>" data-method='delete'>
+              <i class="icon-off"></i>
+              Sair
+            </a>
+          </li>
+        </ul><!-- /.ace-nav -->
+      </div>
     </div><!-- /.container -->
   </div>
   <div class="main-container" id="main-container">
