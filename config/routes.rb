@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controller: { sessions: 'users/sessions' }
-  
+
   resources :students do
     resources :student_histories, only: [ :index, :create ]
   end
+  resources :users
   resources :diagnostics, only: [ :index, :create, :update ]
   resources :service_types, only: [ :index, :create, :update ]
   resources :services, only: [ :index, :create, :update ]
