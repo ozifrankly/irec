@@ -49,7 +49,7 @@ class StudentsController < ApplicationController
   end
 
   def student_params
-    params.require(:student).permit([:id, :name, :cpf, :doc, :birthday, :crm, :doctor, :diagnostic_id])
+    params.require(:student).permit([:id, :name, :father, :mother, :cpf, :doc, :birthday, :crm, :doctor, :diagnostic_id])
   end
 
   def students_json

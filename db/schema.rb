@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723014157) do
+ActiveRecord::Schema.define(version: 20150822172609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20150723014157) do
     t.integer  "diagnostic_id"
     t.integer  "crm"
     t.string   "doctor"
+    t.string   "father"
+    t.string   "mother"
   end
 
   add_index "students", ["cpf"], name: "index_students_on_cpf", using: :btree

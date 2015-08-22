@@ -5,11 +5,25 @@
         <h1>Estudante</h1>
       </div><!-- /.page-header -->
       <div class="profile-user-info profile-user-info-striped">
+
         <div class="profile-info-row">
           <div class="profile-info-name"> Nome </div>
-
           <div class="profile-info-value">
             <span class="editable" id="name"><%= @student.name %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> Pai </div>
+          <div class="profile-info-value">
+            <span class="editable" id="father"><%= @student.father %></span>
+          </div>
+        </div>
+
+        <div class="profile-info-row">
+          <div class="profile-info-name"> Mãe </div>
+          <div class="profile-info-value">
+            <span class="editable" id="mother"><%= @student.mother %></span>
           </div>
         </div>
 
